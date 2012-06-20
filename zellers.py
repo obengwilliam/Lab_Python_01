@@ -7,9 +7,12 @@ description:Zellers alogorithm
 firstname=raw_input("Enter your first name:")
 lastname=raw_input("Enter your last name:")
 print "Enter your date of birth"
-print "Enter march as 1 and april as 2 ----december as 10"
-print "IF BORN IN JANUARY OR FEBRUARY THEN ENTER 11 FOR JANUARY AND 12 FOR FEBRUARY "
 month=raw_input("       Month as a number betweeen 1-12 ?")
+month=int(month)-2
+
+if month <=0:
+   month=month+12
+   
 day=raw_input("         Day?")
 year=raw_input("        Year?")
 print firstname.upper(),lastname.upper(),"was born on",month,day,year
