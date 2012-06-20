@@ -17,7 +17,6 @@ print firstname.upper(),lastname.upper(),"was born on",month,day,year
 a=int(month) #month born
 b=int(day )#day of month
 c=int(year[2:])
-print c
 d=int(year[:2])
 
 if a==11:
@@ -30,4 +29,30 @@ x=c/4
 y=d/4
 z=w+x+y+b+c-2*d
 r=z%7
-print "THis is the day in which you were born",r
+print "THis is the day in which you were born::",
+
+stop=True
+while stop:
+    if r <0:
+       r=r+7
+    if r>0:
+        stop=False
+        
+if r==1:
+    print 'monday'
+elif r==2:
+    print 'tuesday'
+elif r==3:
+    print 'wednesday'
+elif r==4:
+    print 'thursday'
+elif r==5:
+    print 'friday'
+elif r==6:
+    print 'saturday'
+elif r==0:
+    print 'sunday'
+
+
+
+
